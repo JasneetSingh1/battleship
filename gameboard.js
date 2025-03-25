@@ -2,6 +2,7 @@ import { Ship } from "./ship";
 export function Gameboard(){
 
     let gameboard = [];
+    let missedAttacks = 0;
     for(let i = 0; i < 10; i++){
         gameboard[i] = new Array(10).fill(0);
     }
@@ -10,19 +11,21 @@ export function Gameboard(){
         let ship = Ship(3);
 
         for(let i = 0; i < ship.length; i++){
-            gameboard[x][y] = 1;
-            gameboard[y][x] = 1;
+            gameboard[x][y] = ship;
+            gameboard[y][x] = ship;
             x++;
-            // Need something to mark the edges with the specific ship object
         }
         return gameboard[y];
     }
 
     const receiveAttack = (x,y) =>{
-        if(gameboard[x][y] != 1){
+        if(gameboard[x][y] == 0){
+            missedAttacks++;
             return 'miss';
         }else{
-            return "hit";
+            const ship = gameboard[x][y];
+            ship.hit();
+            return ship.getHits();
         }
         
     }

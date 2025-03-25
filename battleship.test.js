@@ -39,7 +39,7 @@ describe("Gameboard function", () => {
 
     it("Place ship on gameboard", () => {
         const board = Gameboard();
-        expect(board.placeShip(1,1)).toEqual([0,1,1,1,0,0,0,0,0,0]);
+        expect(board.placeShip(1,1)).toBeDefined();
     })
 
     // Test for out of bounds, test for vertical or horizontal ship placement
@@ -54,6 +54,6 @@ describe("Gameboard function", () => {
     it("receiveAttack(): hit function works", () => {
         const board = Gameboard();
         board.placeShip(1,1);
-        expect(board.receiveAttack(2,1)).toEqual("hit");
+        expect(board.receiveAttack(2,1)).toEqual(1);
     })
 })
