@@ -2,7 +2,7 @@ import { Ship } from "./ship";
 export function Gameboard(){
 
     let gameboard = [];
-    let missedAttacks = 0;
+    let missedAttacks = []
     for(let i = 0; i < 10; i++){
         gameboard[i] = new Array(10).fill(0);
     }
@@ -20,7 +20,7 @@ export function Gameboard(){
 
     const receiveAttack = (x,y) =>{
         if(gameboard[x][y] == 0){
-            missedAttacks++;
+            missedAttacks.push([x,y]);
             return 'miss';
         }else{
             const ship = gameboard[x][y];

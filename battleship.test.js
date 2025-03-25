@@ -44,7 +44,7 @@ describe("Gameboard function", () => {
 
     // Test for out of bounds, test for vertical or horizontal ship placement
 
-    it("receiveAttack(): Miss function works", () => {
+    it("receiveAttack(): miss function works", () => {
         const board = Gameboard();
         board.placeShip(1,1);
         expect(board.receiveAttack(4,1)).toEqual("miss");
