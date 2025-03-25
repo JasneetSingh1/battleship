@@ -12,13 +12,14 @@ export function Ship(long){
     }
 
     const hit = () => hits++;
+    const getHits = () => hits;
 
     return{
-        hits,
         length,
-        sunk,
         isSunk,
-        hit
+        hit,
+        getHits
+        
     }
 }
 
