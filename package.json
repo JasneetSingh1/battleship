@@ -1,4 +1,21 @@
 {
+  "name": "battleship",
+  "version": "1.0.0",
+  "description": "A Battleship game implemented in JavaScript using Test Driven Development (TDD) with Jest. The game features player and AI opponents, a dynamic gameboard system, and interactive gameplay mechanics.",
+  "main": "battleship.test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasneetSingh1/battleship.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JasneetSingh1/battleship/issues"
+  },
+  "homepage": "https://github.com/JasneetSingh1/battleship",
   "devDependencies": {
     "@babel/core": "^7.26.10",
     "@babel/preset-env": "^7.26.9",
