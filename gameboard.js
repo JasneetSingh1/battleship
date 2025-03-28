@@ -49,8 +49,14 @@ export function Gameboard(){
         }
         
     }
+
+    const allShipsSunk = () => {
+        if(ships == 0) return true;
+        else return false;
+    }
     return{
         placeShip,
-        receiveAttack
+        receiveAttack,
+        allShipsSunk
     };
 }

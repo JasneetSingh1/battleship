@@ -57,4 +57,17 @@ describe("Gameboard function", () => {
     board.placeShip(1, 1), "vertical";
     expect(board.receiveAttack(1, 2)).toEqual(1);
   });
+
+  it("allShipsSunk(): report all ships sunk", () => {
+    const board = Gameboard();
+    board.placeShip(1, 1), "vertical";
+    board.placeShip(5, 5), "horizontal";
+    board.receiveAttack(1,1)
+    board.receiveAttack(1,2)
+    board.receiveAttack(1,3)
+    board.receiveAttack(5,5)
+    board.receiveAttack(6,5)
+    board.receiveAttack(7,5)
+    expect(board.allShipsSunk()).toEqual(true);
+  });
 });
