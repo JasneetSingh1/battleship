@@ -79,4 +79,9 @@ describe("Player function", () => {
     const pl = Player();
     expect(pl).toBeDefined();
   })
+
+  it("Player function able to place ship in their gameboard", () => {
+    const pl = Player();
+    expect(pl.gameboard.placeShip(1, 1, "vertical")).toBeDefined();
+  })
 })
