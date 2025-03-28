@@ -2,7 +2,8 @@ import { Ship } from "./ship";
 export function Gameboard(){
 
     let gameboard = [];
-    let missedAttacks = []
+    let missedAttacks = [];
+    let ships = 0;
     for(let i = 0; i < 10; i++){
         gameboard[i] = new Array(10).fill(0);
     }
@@ -13,7 +14,7 @@ export function Gameboard(){
         }
 
         let ship = Ship(3);
-
+        ships++;
         for(let i = 0; i < ship.length; i++){
             
             
@@ -41,6 +42,9 @@ export function Gameboard(){
         }else{
             const ship = gameboard[x][y];
             ship.hit();
+            if(ship.isSunk() == true){
+                ships--;
+            }
             return ship.getHits();
         }
         
