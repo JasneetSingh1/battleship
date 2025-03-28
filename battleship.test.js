@@ -1,5 +1,6 @@
 import { Ship } from "./ship";
 import { Gameboard } from "./gameboard";
+import { Player } from "./player";
 
 describe("Ship Function", () => {
   it("Create object", () => {
@@ -71,3 +72,11 @@ describe("Gameboard function", () => {
     expect(board.allShipsSunk()).toEqual(true);
   });
 });
+
+describe("Player function", () => {
+
+  it("Player function object exists", () => {
+    const pl = Player();
+    expect(pl).toBeDefined();
+  })
+})
