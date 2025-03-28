@@ -7,14 +7,30 @@ export function Gameboard(){
         gameboard[i] = new Array(10).fill(0);
     }
 
-    const placeShip = (x,y) =>{
+    const placeShip = (x,y, placement) =>{
+        if(x >= 10 || y >= 10 || x <= 0 || y <= 0){
+            return 'Invalid placement';
+        }
+
         let ship = Ship(3);
 
         for(let i = 0; i < ship.length; i++){
+            
+            
             gameboard[x][y] = ship;
             gameboard[y][x] = ship;
-            x++;
+            if(placement == "vertical"){
+                y++;
+            }
+            else{
+                x++;
+            }
+            
         }
+        if(placement == 'vertical'){
+            return gameboard[x];
+        }
+        
         return gameboard[y];
     }
 
