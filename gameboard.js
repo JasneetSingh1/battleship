@@ -1,4 +1,4 @@
-import { Ship } from "./ship";
+import { Ship } from "./ship.js";
 export function Gameboard(){
 
     let gameboard = [];
@@ -54,9 +54,14 @@ export function Gameboard(){
         if(ships == 0) return true;
         else return false;
     }
+
+    const getBoard = () => {
+        return gameboard;
+    }
     return{
         placeShip,
         receiveAttack,
-        allShipsSunk
+        allShipsSunk,
+        getBoard
     };
 }

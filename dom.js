@@ -1,20 +1,27 @@
-const playerBoard = document.querySelector(".player-board");
-const compBoard = document.querySelector(".computer-board");
 
 
-export function createGrid(){
-    document.querySelectorAll('.grid').forEach( n => n.remove());
+export function createGrid(gameboard, playerDom){
+
+    const board = gameboard.getBoard();
     
-    for(let i = 0; i < 10 * 10; i++){
-        let gridItem = document.createElement('div');
-        gridItem.classList.add('grid');
-        const measure = (500 / 10);
-        gridItem.setAttribute('style', `width:${measure}px; height:${measure}px;`);
-        playerBoard.appendChild(gridItem);
-        compBoard.appendChild(gridItem);
+    
+    for(let i = board.length - 1; i >= 0; i--){
+
+        for(let j = 0; j < board[i].length; j++){
+            let gridItem = document.createElement('div');
+            gridItem.classList.add('grid');
+            const measure = (500 / 10);
+            gridItem.setAttribute('coordinate', `${[j+1,i+1]}`)
+            gridItem.setAttribute('style', `width:${measure}px; height:${measure}px;`);
+            
+            playerDom.appendChild(gridItem);
+
+
+
+        }
+
     }
 
 
 }
-
 
