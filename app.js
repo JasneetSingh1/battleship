@@ -1,4 +1,2 @@
-import { Player } from "./player";
+import  "./events.js";
 
-const player1 = Player();
-const player2 = Player();

@@ -2,7 +2,8 @@
   "name": "battleship",
   "version": "1.0.0",
   "description": "A Battleship game implemented in JavaScript using Test Driven Development (TDD) with Jest. The game features player and AI opponents, a dynamic gameboard system, and interactive gameplay mechanics.",
-  "main": "battleship.test.js",
+  "main": "app.js",
+
   "scripts": {
     "test": "jest"
   },
