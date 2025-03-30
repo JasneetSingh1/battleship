@@ -19,7 +19,7 @@ export function Gameboard(){
             
             
             gameboard[x][y] = ship;
-            gameboard[y][x] = ship;
+            // gameboard[y][x] = ship;
             if(placement == "vertical"){
                 y++;
             }
@@ -45,7 +45,8 @@ export function Gameboard(){
             if(ship.isSunk() == true){
                 ships--;
             }
-            return ship.getHits();
+            ship.getHits();
+            return 'hit';
         }
         
     }

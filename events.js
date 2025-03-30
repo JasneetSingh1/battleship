@@ -21,10 +21,15 @@ export const game = button.addEventListener('click', () => {
             const coordinate = elem.getAttribute('coordinate');
             const position = coordinate.split(',');
             console.log(position)
-            console.log(position[0] -1 , position[1] -1)
+            
            const result = player.gameboard.receiveAttack(position[0] , position[1]);
 
-           alert(result);
+           if(result == 'hit'){
+            elem.textContent = "*";
+           }
+           else{
+            elem.textContent = "X";
+           }
         })
     })
 })
