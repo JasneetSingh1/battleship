@@ -39,4 +39,7 @@ body {
   border: 0.1px solid black;
   width: 31.25px;
   height: 31.25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

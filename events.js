@@ -15,7 +15,7 @@ export const game = button.addEventListener('click', () => {
     createGrid(player2.gameboard, playerBoard);
 
     const coor = document.querySelector('.computer-board').querySelectorAll(".grid");
-    player.gameboard.placeShip(1, 1, "vertical")
+    player.gameboard.placeShip(1, 1, "hori")
     coor.forEach(function(elem){
         elem.addEventListener('click', function(){
             const coordinate = elem.getAttribute('coordinate');
@@ -25,10 +25,10 @@ export const game = button.addEventListener('click', () => {
            const result = player.gameboard.receiveAttack(position[0] , position[1]);
 
            if(result == 'hit'){
-            elem.textContent = "*";
+            elem.textContent = "✷";
            }
            else{
-            elem.textContent = "X";
+            elem.textContent = "•";
            }
         })
     })
