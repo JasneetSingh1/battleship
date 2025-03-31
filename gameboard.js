@@ -2,7 +2,7 @@ import { Ship } from "./ship.js";
 export function Gameboard(){
 
     let gameboard = [];
-    let missedAttacks = [];
+    let attacks = [];
     let ships = 0;
     for(let i = 0; i < 10; i++){
         gameboard[i] = new Array(10).fill(0);
@@ -36,10 +36,12 @@ export function Gameboard(){
     }
 
     const receiveAttack = (x,y) =>{
+        if(attacks.some(arr => JSON.stringify(arr) === JSON.stringify([x,y]))) return 'invalid';
         if(gameboard[x][y] == 0){
-            missedAttacks.push([x,y]);
+            attacks.push([x,y]);
             return 'miss';
         }else{
+            attacks.push([x,y]);
             const ship = gameboard[x][y];
             ship.hit();
             if(ship.isSunk() == true){

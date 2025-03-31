@@ -74,10 +74,13 @@ export const game = button.addEventListener("click", () => {
 
       if (result == "hit") {
         elem.textContent = "✷";
-      } else {
+      } else if(result == "miss") {
         elem.textContent = "•";
         switchPlayerTurn();
         switchTurn();
+      }
+      else{
+        return;
       }
 
 
@@ -93,10 +96,13 @@ export const game = button.addEventListener("click", () => {
 
       if (result == "hit") {
         elem.textContent = "✷";
-      } else {
+      } else if(result == "miss") {
         elem.textContent = "•";
         switchPlayerTurn();
         switchTurn();
+      }
+      else{
+        return;
       }
 
 
