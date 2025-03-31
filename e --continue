@@ -1,0 +1,137 @@
+[33mcommit a6d48b7a3f2e223303bba7c71c92f362a49e9391[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Sun Mar 30 20:40:19 2025 -0600
+
+    feat: game stays on player turn if player hits a ship
+
+[33mcommit 0419fccae114e3d133d8ff02be40d93c846791aa[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Sun Mar 30 20:26:16 2025 -0600
+
+    feat: game stays on player turn if player hits a ship
+
+[33mcommit bfd610aea96d0fc2fccac1482156e85fa91025c4[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Sun Mar 30 20:21:48 2025 -0600
+
+    feat: create function so players have to take turns striking on each others gameboards
+
+[33mcommit 125039310af5049e5371b8e835272837903ed4b1[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Sun Mar 30 15:38:36 2025 -0600
+
+    feat: update board on every hit or miss
+
+[33mcommit 622ade5c5f8f5c5b17f3ee4f9e87f1da1b9b9976[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Sun Mar 30 15:34:46 2025 -0600
+
+    fix: fixed bug that placed ships vertically and horizontally
+
+[33mcommit 5a0bcd6d276f27101e49fe0c1e1ed7044d198259[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Sat Mar 29 08:12:24 2025 -0600
+
+    feat: create event listener to give function to click on a grid and activate receiveAttack for that gameboard
+
+[33mcommit 9b179b41c7551ae021decea8b33c73394861db5a[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Sat Mar 29 07:10:37 2025 -0600
+
+    feat: create gameboard with coordinates for each gameboard attached to the dom grid elements
+
+[33mcommit 696284fcd8c3c06065c9e9f2d408840d9c93da12[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Fri Mar 28 18:12:11 2025 -0600
+
+    feat: create function to populate gameboards
+
+[33mcommit a31da5984ad6baa1f02a7c53ac90198e705a00ab[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Fri Mar 28 16:02:50 2025 -0600
+
+    feat: create html file, dom file, events file, app js file
+
+[33mcommit 5c6490463891e10a67371389627a6ecc51f7f1b4[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Fri Mar 28 14:49:37 2025 -0600
+
+    feat: player able to place ship in their gameboard
+
+[33mcommit ba1bed9b82986a3e82534543ba4dec51f5a93efc[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Fri Mar 28 14:47:22 2025 -0600
+
+    feat: create player function
+
+[33mcommit 39dee84008dac14cb1c6e2314960d5b773a66fbc[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Fri Mar 28 14:43:07 2025 -0600
+
+    feat: create function to return if all ships have been sunk
+
+[33mcommit 17a4951bcd2b3471fb756730532dfc7cb3bcd756[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Fri Mar 28 14:38:51 2025 -0600
+
+    feat: create variable to track ships on gameboard
+
+[33mcommit d1871f273947ef2212fd52851f86cb66d6f555dc[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Fri Mar 28 14:35:19 2025 -0600
+
+    feat: add tests and code for vertical and horizontal placement of ship, add logic for invalid placement of ship
+
+[33mcommit 8496d0c741a9f025b473e077ac51593f4b574ad2[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Tue Mar 25 15:25:49 2025 -0600
+
+    feat: make receiveAttack() function hold missed attacks in missedAttacks array
+
+[33mcommit 5154654e7a158326b322303174f72a088f461ca3[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Tue Mar 25 15:23:30 2025 -0600
+
+    feat: vertices matrix now holds ship object instead of 1, can use it to signal hit during receiveAttack function
+
+[33mcommit be2c9371887bec050cb6189faccaaf78772fa241[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Tue Mar 25 15:16:38 2025 -0600
+
+    feat: add ship and receive attack functions to place ship and return if hit or not
+
+[33mcommit a5f475892ee1ee51df9192bf06622732650b6744[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Tue Mar 25 13:01:33 2025 -0600
+
+    feat: add tests for ship function
+
+[33mcommit ef49b0f817ac3fe666a3fee14526312c514bd9c5[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Tue Mar 25 12:44:43 2025 -0600
+
+    fix: re-create package.json so i can add details of project to package.json
+
+[33mcommit 03d91c8d775dae9d05b6643f8681b03f1c90d35a[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Tue Mar 25 12:29:55 2025 -0600
+
+    feat: installed babel dependencies to use es6 modules
+
+[33mcommit b07947f1892ff34ac3b737a335964d51c7e67fd9[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Tue Mar 25 11:15:15 2025 -0600
+
+    feat: add jest to project
+
+[33mcommit 051effcd304413676f8f03d620dc1d3971fb1285[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Tue Mar 25 11:10:50 2025 -0600
+
+    docs: add readme template for project docs
+
+[33mcommit d4ceb379d2c0885919c89e10aed8feaccb1402b6[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Jasneet Singh <100010929+JasneetSingh1@users.noreply.github.com>
+Date:   Tue Mar 25 11:06:32 2025 -0600
+
+    Initial commit

@@ -34,7 +34,8 @@ export const game = button.addEventListener("click", () => {
   const getActivePlayer = () => activePlayer;
   let turn = document.querySelector(".player-turn");
   turn.textContent = getActivePlayer().name;
-
+  let end = document.querySelector(".end-game");
+  end.textContent = "";
   const player1Grid = document
     .querySelector(".player-board")
     .querySelectorAll(".grid");
@@ -74,6 +75,10 @@ export const game = button.addEventListener("click", () => {
 
       if (result == "hit") {
         elem.textContent = "✷";
+        if(player1.gameboard.allShipsSunk()){
+            end.textContent = `GAME OVER: ${getActivePlayer().name} WON!!`
+            document.querySelectorAll(".grid").forEach((n) => n.remove());
+        }
       } else if(result == "miss") {
         elem.textContent = "•";
         switchPlayerTurn();
@@ -96,6 +101,10 @@ export const game = button.addEventListener("click", () => {
 
       if (result == "hit") {
         elem.textContent = "✷";
+        if(player2.gameboard.allShipsSunk()){
+            end.textContent = `GAME OVER: ${getActivePlayer().name} WON!!`
+            document.querySelectorAll(".grid").forEach((n) => n.remove());
+        }
       } else if(result == "miss") {
         elem.textContent = "•";
         switchPlayerTurn();
