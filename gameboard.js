@@ -19,7 +19,7 @@ export function Gameboard(){
             
             
             gameboard[x][y] = ship;
-            // gameboard[y][x] = ship;
+           
             if(placement == "vertical"){
                 y++;
             }

@@ -7,10 +7,6 @@ export function createGrid(gameboard, playerDom) {
       gridItem.classList.add("grid");
       const measure = 500 / 10;
       gridItem.setAttribute("coordinate", `${[j , i ]}`);
-      gridItem.setAttribute(
-        "style",
-        `width:${measure}px; height:${measure}px;`
-      );
 
       playerDom.appendChild(gridItem);
     }
