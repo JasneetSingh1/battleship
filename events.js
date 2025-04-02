@@ -61,15 +61,18 @@ export const game = button.addEventListener("click", () => {
         elem.removeAttribute("style");
       });
       turn.textContent = getActivePlayer().name;
+      
+      while(compMove() == true);
     }
   };
 
-  const compMove = () => {
+  const compMove = async () => {
     let x = Math.floor(Math.random() * 10);
     let y = Math.floor(Math.random() * 10);
 
+    await new Promise(resolve => setTimeout(resolve, 2000));
     document.querySelector(`[coordinate="${[x,y]}"]`).click();
-  }
+};
 
   
 
@@ -84,15 +87,21 @@ export const game = button.addEventListener("click", () => {
         elem.textContent = "✷";
         if(player1.gameboard.allShipsSunk()){
             end.textContent = `GAME OVER: ${getActivePlayer().name} WON!!`
-            document.querySelectorAll(".grid").forEach((n) => n.remove());
+            document.querySelectorAll(".grid").forEach((n) => n.setAttribute("style", "pointer-events:none;"));
+        }
+        else{
+          switchTurn();
+          
         }
       } else if(result == "miss") {
         elem.textContent = "•";
         switchPlayerTurn();
         switchTurn();
+        
       }
       else{
-        return;
+        switchTurn();
+        
       }
 
 
@@ -110,7 +119,7 @@ export const game = button.addEventListener("click", () => {
         elem.textContent = "✷";
         if(player2.gameboard.allShipsSunk()){
             end.textContent = `GAME OVER: ${getActivePlayer().name} WON!!`
-            document.querySelectorAll(".grid").forEach((n) => n.remove());
+            document.querySelectorAll(".grid").forEach((n) => n.setAttribute("style", "pointer-events:none;"));
         }
       } else if(result == "miss") {
         elem.textContent = "•";
