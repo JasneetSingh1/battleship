@@ -24,9 +24,35 @@ export const game = button.addEventListener("click", () => {
     },
   ];
 
-  player1.gameboard.placeShip(1, 1, "hori");
-  player2.gameboard.placeShip(1, 1, "hori");
+  const compShips = () => {
 
+    for(let i = 0; i < 3; i++){
+      let x = Math.floor(Math.random() * 10);
+      let y = Math.floor(Math.random() * 10);
+      let place = false;
+      while(place == false){
+        let random = Math.random()
+        if(random > .5){
+          
+          place = player2.gameboard.placeShip(x,y, "hori");
+        }
+        else{
+          
+          place = player2.gameboard.placeShip(x,y, "vertical");
+        }
+        
+        if(place == false){
+          x = Math.floor(Math.random() * 10);
+          y = Math.floor(Math.random() * 10);
+        }
+
+      }
+      console.log([i,x,y])
+    }
+  }
+  player1.gameboard.placeShip(1, 1, "hori");
+  compShips();
+  
   let activePlayer = players[0];
   const switchPlayerTurn = () => {
     activePlayer = activePlayer === players[0] ? players[1] : players[0];
@@ -70,7 +96,7 @@ export const game = button.addEventListener("click", () => {
     let x = Math.floor(Math.random() * 10);
     let y = Math.floor(Math.random() * 10);
 
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 10));
     document.querySelector(`[coordinate="${[x,y]}"]`).click();
 };
 
