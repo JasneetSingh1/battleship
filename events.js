@@ -47,7 +47,7 @@ export const game = button.addEventListener("click", () => {
         }
 
       }
-      console.log([i,x,y])
+      
     }
   }
   player1.gameboard.placeShip(1, 1, "hori");
