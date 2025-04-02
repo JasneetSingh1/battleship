@@ -45,26 +45,33 @@ export const game = button.addEventListener("click", () => {
 
   const switchTurn = () => {
     if (getActivePlayer() == players[0]) {
-      player2Grid.forEach(function (elem) {
+      player1Grid.forEach(function (elem) {
         elem.setAttribute("style", "pointer-events:none;");
       });
-      player1Grid.forEach(function (elem) {
+      player2Grid.forEach(function (elem) {
         elem.removeAttribute("style");
       });
       turn.textContent = getActivePlayer().name;
     } else {
-      player1Grid.forEach(function (elem) {
+      player2Grid.forEach(function (elem) {
         elem.setAttribute("style", "pointer-events:none;");
       });
 
-      player2Grid.forEach(function (elem) {
+      player1Grid.forEach(function (elem) {
         elem.removeAttribute("style");
       });
       turn.textContent = getActivePlayer().name;
     }
   };
 
-  switchTurn();
+  const compMove = () => {
+    let x = Math.floor(Math.random() * 10);
+    let y = Math.floor(Math.random() * 10);
+
+    document.querySelector(`[coordinate="${[x,y]}"]`).click();
+  }
+
+  
 
   player1Grid.forEach(function (elem) {
     elem.addEventListener("click", function () {
