@@ -61,7 +61,7 @@ export function Gameboard() {
   const canPlaceShip = (x, y, placement, board) => {
     x = parseInt(x);
     y = parseInt(y);
-
+    console.log(board)
     if (x >= 10 || y >= 10 || x < 0 || y < 0) {
       return false;
     }
@@ -90,6 +90,7 @@ export function Gameboard() {
     let tempBoard = getBoard().map((row) => row.slice());
 
     if (!canPlaceShip(x, y, placement, tempBoard)) {
+      console.log("First ship placement failed at: ", x, y);
       alert("Cannot place first ship here.");
       return false;
     }
@@ -143,11 +144,20 @@ export function Gameboard() {
   const getBoard = () => {
     return gameboard;
   };
+
+  const resetBoard = () => {
+    
+    gameboard = new Array(10).fill(0).map(() => new Array(10).fill(0));
+    attacks = [];
+    ships = 0;
+  };
+
   return {
     placeShip,
     receiveAttack,
     allShipsSunk,
     getBoard,
     simPlaceShip,
+    resetBoard
   };
 }

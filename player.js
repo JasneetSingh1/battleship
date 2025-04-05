@@ -2,6 +2,8 @@ import { Gameboard } from "./gameboard.js";
 export function Player(){
     
     const gameboard = Gameboard();
-
-    return {gameboard}
+    const reset = () => {
+        gameboard.resetBoard(); 
+    }
+    return {gameboard, reset}
 }

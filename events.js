@@ -4,6 +4,7 @@ import { Player } from "./player.js";
 const playerBoard = document.querySelector(".player-board");
 const compBoard = document.querySelector(".computer-board");
 const button = document.querySelector(".btn");
+const reset = document.querySelector(".reset");
 
 const shipDialog = document.querySelector(".ship-dialog");
 const shipForm = document.querySelector(".ship-form");
@@ -17,13 +18,34 @@ const bravop = document.querySelector("#bravo-ship-place");
 
 export const game = button.addEventListener("click", () => {
   document.querySelectorAll(".grid").forEach((n) => n.remove());
+  button.setAttribute("style", "pointer-events:none;");
+  
+  reset.addEventListener("click", () => {
+    end.textContent = "";
+    turn.textContent = "";
+    player1.reset();
+    player2.reset();
+    document.querySelectorAll(".grid").forEach((n) => n.remove());
+    button.removeAttribute("style");
+  })
+
   shipDialog.showModal();
 
-  let player2 = Player();
-  createGrid(player2.gameboard, compBoard);
-
   let player1 = Player();
+  let player2 = Player();
+
+  
+
   createGrid(player1.gameboard, playerBoard);
+  createGrid(player2.gameboard, compBoard);
+  
+
+  alphax.value = "";
+  alphay.value = "";
+  bravox.value = "";
+  bravoy.value = "";
+  alphap.value = "";
+  bravop.value = "";
 
   const players = [
     {
