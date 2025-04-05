@@ -10,7 +10,7 @@ export function Gameboard() {
   const placeShip = (x, y, placement) => {
     x = parseInt(x);
     y = parseInt(y);
-    if (x >= 10 || y >= 10 || x <= 0 || y <= 0) {
+    if (x >= 10 || y >= 10 || x < 0 || y < 0) {
       return false;
     }
 
@@ -62,7 +62,7 @@ export function Gameboard() {
     x = parseInt(x);
     y = parseInt(y);
 
-    if (x >= 10 || y >= 10 || x <= 0 || y <= 0) {
+    if (x >= 10 || y >= 10 || x < 0 || y < 0) {
       return false;
     }
 
