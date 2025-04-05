@@ -30,8 +30,8 @@ body {
 .computer-board {
     display: flex;
     flex-wrap: wrap;
-    width: 500px;
-    height: 500px;
+    width: 550px;
+    height: 550px;
     
 }
 
