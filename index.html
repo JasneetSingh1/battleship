@@ -16,12 +16,13 @@
     <dialog class="ship-dialog">
         <form class="ship-form" action="" method="dialog">
             <h1>Place your ships</h1>
+            <h2>Remember each ship has a length of 3</h2>
             <hr>
             <label for="alpha-ship">Alpha:</label>
             <input type="number" id="alpha-ship" name="alpha" min="0" max="9" required>
             <input type="number" id="alpha-ship-y" name="alpha-y" min="0" max="9" required>
             <label for="alpha-ship-place">Choose the placement: </label>
-            <select name="alpha-ship" id="alpha-ship-place">
+            <select name="alpha-ship" id="alpha-ship-place" required>
                 <option value="">--Please choose an option--</option>
                 <option value="vertical">Vertical</option>
                 <option value="horizontal">Horizontal</option>
@@ -32,7 +33,7 @@
             <input type="number" id="bravo-ship" name="bravo" min="0" max="9" required>
             <input type="number" id="bravo-ship-y" name="bravo-y" min="0" max="9" required>
             <label for="bravo-ship-place">Choose the placement: </label>
-            <select name="bravo-ship" id="bravo-ship-place">
+            <select name="bravo-ship" id="bravo-ship-place" required>
                 <option value="">--Please choose an option--</option>
                 <option value="vertical">Vertical</option>
                 <option value="horizontal">Horizontal</option>
