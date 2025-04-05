@@ -44,7 +44,7 @@ describe("Gameboard function", () => {
 
   it("Place ship on gameboard invalid position", () => {
     const board = Gameboard();
-    expect(board.placeShip(0, 1, "vertical")).toBe("Invalid placement");
+    expect(board.placeShip(0, 1, "vertical")).toBe(false);
   });
 
   it("receiveAttack(): miss function works", () => {
@@ -56,7 +56,7 @@ describe("Gameboard function", () => {
   it("receiveAttack(): hit function works", () => {
     const board = Gameboard();
     board.placeShip(1, 1, "vertical");
-    expect(board.receiveAttack(1, 2)).toEqual(1);
+    expect(board.receiveAttack(1, 2)).toEqual('hit');
   });
 
   it("allShipsSunk(): report all ships sunk", () => {
