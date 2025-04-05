@@ -44,3 +44,9 @@ body {
   align-items: center;
 }
 
+
+.ship-dialog{
+  align-self: safe center;
+  justify-self: safe center;
+  overflow: hidden;
+}

@@ -4,8 +4,10 @@ import { Player } from "./player.js";
 const playerBoard = document.querySelector(".player-board");
 const compBoard = document.querySelector(".computer-board");
 const button = document.querySelector(".btn");
+
 const shipDialog = document.querySelector(".ship-dialog");
 const shipForm = document.querySelector(".ship-form");
+
 const alphax = document.querySelector("#alpha-ship");
 const alphay = document.querySelector("#alpha-ship-y");
 
