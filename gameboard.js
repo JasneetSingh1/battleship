@@ -46,7 +46,7 @@ export function Gameboard() {
 
     let ship = Ship(3);
     ships++;
-    for (let i = 0; i < ship.length; i++) {
+    for (let i = 0; i < ship.getLength(); i++) {
       gameboard[x][y] = ship;
 
       if (placement == "vertical") {

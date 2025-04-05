@@ -13,9 +13,10 @@ export function Ship(long){
 
     const hit = () => hits++;
     const getHits = () => hits;
+    const getLength = () => length;
 
     return{
-        length,
+        getLength,
         isSunk,
         hit,
         getHits

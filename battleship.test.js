@@ -10,7 +10,6 @@ describe("Ship Function", () => {
 
   it("Object contains correct properties", () => {
     const boat = Ship(2);
-    expect(boat).toHaveProperty("length");
     expect(boat).toHaveProperty("getHits");
     expect(boat).toHaveProperty("isSunk");
     expect(boat).toHaveProperty("hit");
@@ -44,7 +43,12 @@ describe("Gameboard function", () => {
 
   it("Place ship on gameboard invalid position", () => {
     const board = Gameboard();
-    expect(board.placeShip(0, 1, "vertical")).toBe(false);
+    expect(board.placeShip(0, 9, "vertical")).toBe(false);
+  });
+
+  it("Place ship on gameboard invalid position 2", () => {
+    const board = Gameboard();
+    expect(board.placeShip(9, 9, "horizontal")).toBe(false);
   });
 
   it("receiveAttack(): miss function works", () => {
